@@ -1,0 +1,27 @@
+
+
+<header>
+    <div class="navbar navbar-dark bg-primary shadow-sm">
+        <div class="navbar-brand align-item-center d-flex">
+            <i style="font-size:40px;" class="fas fa-shipping-fast">
+            </i>
+                <strong style="font-size:30px;">E-Medicare</strong>
+                
+        </div>
+        
+     
+        <nav class="navigation">
+            <a routerLink="/admin" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="main-items">Admin</a>
+            <a routerLink="/user" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="main-items">User</a>
+            <!--<a routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="main-items">About Us</a>
+            --><a routerLink="/contact" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="main-items"> Contact Us</a> 
+            
+              
+        </nav>
+                
+</div>
+   
+
+<router-outlet></router-outlet>
+
+

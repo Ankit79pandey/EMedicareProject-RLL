@@ -1,0 +1,66 @@
+.logout{
+    color: white;
+    float: right;
+    margin-bottom: 20px;
+    font-weight: 600;
+    font-size: 25px;
+   
+}
+.row{
+    background-color: rgb(62, 141, 191);
+    background: transparent;
+margin: 50px;}
+
+.scroll{
+    overflow-y: scroll;
+    overflow-x: scroll;
+}
+
+@media only screen and (max-width: 600px){
+table{
+    width: 300px;
+    
+        overflow-y: scroll;
+
+    }
+}
+ 
+    
+
+table th{
+    background-color: rgb(6, 54, 97);
+    color: white;
+    
+   }
+   table{
+    background-color: antiquewhite;
+    opacity: 0.8;
+   transition: 500ms;
+   
+    
+   }
+
+  .add{
+    font-weight: 600;
+    font-size: 25px;
+margin: auto;
+width: 500px;
+  }
+   table:hover{
+    box-shadow: 4px 4px 8px 8px #484a4a;
+   opacity: 1;
+   }
+  .add:hover{
+    background-color: green;
+  }
+  .logout:hover{
+    background-color: rgb(200, 162, 9);
+    border: none;
+    
+  }
+  .danger:hover{
+    background-color: red;
+  }
+  .edit:hover{
+    background-color: blue;
+  }

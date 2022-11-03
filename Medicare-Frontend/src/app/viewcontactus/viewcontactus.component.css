@@ -1,0 +1,96 @@
+#sect1 {  
+    background-image:url("https://images.unsplash.com/photo-1628771065518-0d82f1938462?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fG1lZGljaW5lfGVufDB8fDB8fA%3D%3D&w=1000&q=80");  
+    background-size: 100%;  
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat; 
+    z-index: -1;
+    position: absolute ;
+    opacity: 1; 
+  }  
+  @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
+  @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+  
+  .main-header-1 {
+      background-color: rgba(6, 6, 252, 0.705)
+      /* background-color: #f1ddc0; */
+  }
+  .logo {
+      font-weight: bold;
+      color: white;
+      font-size: 28px;
+      text-decoration: none;
+      position: relative;
+      left: 8%;
+      line-height: 38px;
+  }
+  .main-header-1 > div {
+      display: inline-block;
+      vertical-align: middle;
+      padding: 10px;
+  }
+  .navigation {
+      width: 100%;
+      position: absolute;
+      left: 0;
+      padding: 8px;
+      z-index: 1;
+      display: inline-block;
+      text-align: right;
+      width: fit-content;
+      margin-left: 75%;
+      
+  }
+  .main-items{
+      font-size: 14pt;
+      font-weight: bold;
+      line-height: 38px;
+      
+  }
+  .navigation > a {
+      display: inline-block;
+      margin: 0 8px;
+      text-decoration: none;
+      font-weight: 900;
+      color: white;
+  }
+  .content {
+      width: 100%;
+      height: 540px;
+      background-size: cover;
+  }
+  .head1 {
+      position: relative;
+      top: 45%;
+      margin: auto;
+      color: white;
+      text-align: center;
+      font-size: 30pt;
+      font-weight: 800;
+  }
+  .amenities {
+      height: 300px;
+      position: relative;
+      top: 5%;
+      background-color: beige;
+  }
+  .ul-list1 {
+      text-align: center;
+      list-style: none;
+      width: auto; 
+      background-color: beige;
+      background-position: center;
+  }
+  .button {
+    background-color: rgba(6, 6, 252, 0.705);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }

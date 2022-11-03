@@ -1,0 +1,75 @@
+<header>
+    <div class="navbar navbar-dark bg-primary shadow-sm">
+        <div class="navbar-brand align-item-center d-flex">
+            <i style="font-size:40px;" class="fas fa-shipping-fast">
+            </i>
+                <strong style="font-size:30px;">E-Medicare</strong>
+                
+        </div>
+        
+        
+        <nav class="navigation">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a routerLink="/userpage" routerLinkActive="active" style="color: white;" [routerLinkActiveOptions]="{exact: true}" class="main-items">Back</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a routerLink="" routerLinkActive="active" style="color: white;" [routerLinkActiveOptions]="{exact: true}" class="main-items">Log-out</a>
+            
+        </nav>
+                
+</div>
+
+  <h1  style="text-align: center;color: black;">Summary</h1>
+  <div class="enroll" style="margin-top: 30px">
+<form #s="ngForm" (ngSubmit)="onSubmit(s)"> 
+    <div class="form-group">
+     <!-- <label for="medicineId">Medicine Id </label> -->
+      <input type="hidden" name="medicineId" [(ngModel)] = "Medicine.medicineId" readonly/>
+  </div>
+  <h3>Confirm Your Product</h3>
+      <div class="form-group">
+        <label for="medicineName" >Medicine Name </label>
+        <input type="text" name="medicineName" [(ngModel)] = "Medicine.medicineName" readonly/>
+    </div>
+          <div class="form-group">
+              <label for="price">Price Of Product </label>
+              <input type="text" name="price" [(ngModel)] = "Medicine.price" readonly/>
+        </div><br><br>
+        <h3>Please Enter The Required Details To Proceed</h3>
+    <div class="form-group">
+    Choose the Payment Method
+    <select name="demo" id="#">
+        <option selected="selected" value="one">Debit Card</option>
+        <option value="two">Credit Card</option>
+        <option value="three">UPI</option>
+        </select>
+        </div>
+        <div class="form-group">
+            <label> Card Number/UPI Id </label>
+            <input type="text" required class="form-control" name="id" ngModel #id="ngModel"/>
+            <span 
+          *ngIf="id.invalid && id.touched" class="error">required</span>
+      </div>
+      <div class="form-group">
+        <label> Address Line 1 </label>
+        <input type="text" type="text" required class="form-control" name="a1" ngModel #a1="ngModel"/>
+        <span 
+          *ngIf="a1.invalid && a1.touched" class="error">required</span>
+  </div>
+  <div class="form-group">
+    <label> Address Line 2 </label>
+    <input type="text" type="text" required class="form-control" name="a2" ngModel #a2="ngModel"/>
+    <span 
+          *ngIf="a2.invalid && a2.touched" class="error">required</span>
+</div>
+<div class="form-group">
+    <label> Address Line 3 </label>
+    <input type="text"  type="text" required class="form-control" name="a3" ngModel #a3="ngModel"/>
+    <span 
+          *ngIf="a3.invalid && a3.touched" class="error">required</span>
+</div>
+    <br>  <input [disabled]="s.invalid" type="submit" class="button" value="CONFIRM"/>
+
+<button (click)="back()" class="buttonon">ABORT</button>
+</form>
+<router-outlet></router-outlet>

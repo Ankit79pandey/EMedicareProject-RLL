@@ -1,0 +1,25 @@
+<app-header></app-header>
+
+<body>
+
+<h2 >Admin Login</h2>
+<form class="Form" #f="ngForm" (ngSubmit)="onSubmit(f)">
+  
+
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="UserName" id="username" name="username" 
+                    class="searchTextField" placeholder="Enter Username" ngModel> 
+                
+
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" id="password" name="password" 
+                class="searchTextField" placeholder="Enter Password" ngModel>
+          
+    <button type="submit">Login</button>
+    
+  </div>
+
+  
+</form>

@@ -1,0 +1,56 @@
+<app-header></app-header>
+<div >
+  
+	<div  style="margin-top: 30px">
+
+<h1 style="text-align: center;"> User Registration</h1>
+
+<div class="container form">
+  <form #s="ngForm" (ngSubmit)="onSubmit(s)">
+      <div class="form-group">
+        <label for="first_name">FirstName</label>
+        <input type="text" required class="form-control" name="first_name" ngModel 
+        #first_name="ngModel" />
+      <span 
+      *ngIf="first_name.invalid && first_name.touched" class="error">Cannot submit form if required fields are not filled</span>
+      </div> 
+      <div class="form-group">
+          <label for="last_name">LastName</label>
+          <input type="text" name="last_name" ngModel />
+        </div>
+        <div class="form-group">
+          <label for="mobile_no">Mobile Number</label>
+          <input type="number" required class="form-control" name="mobile_no" ngModel #mobile_no="ngModel" />
+          <span 
+          *ngIf="mobile_no.invalid && mobile_no.touched" class="error">Cannot submit form if required fields are not filled</span>
+        </div>
+        <div class="form-group">
+          <label for="age">Age</label>
+          <input type="text" required class="form-control" name="age" ngModel #age="ngModel"/>
+          <span 
+          *ngIf="age.invalid && age.touched" class="error">Cannot submit form if required fields are not filled</span>
+        </div>
+        <div class="form-group">
+          <label for="username">UserName</label>
+          <input type="text" required class="form-control" name="username" ngModel #username="ngModel" />
+          <span 
+          *ngIf="username.invalid && username.touched" class="error">Cannot submit form if required fields are not filled</span>
+        </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" required class="form-control" name="password" ngModel #password="ngModel" />
+        <span 
+          *ngIf="password.invalid && password.touched" class="error">Cannot submit form if required fields are not filled</span>
+      </div>
+      <div class="form-group">
+        <label for="gender">Gender</label>
+        <input type="text" required class="form-control" name="gender" ngModel #gender="ngModel"/>
+        <span 
+        *ngIf="gender.invalid && gender.touched" class="error">Cannot submit form if required fields are not filled</span>
+      </div>
+      <button [disabled]="s.invalid" type="submit" class="submit" value="Submit" >Submit</button>
+     
+    </form>
+  </div>
+    </div>
+    </div>

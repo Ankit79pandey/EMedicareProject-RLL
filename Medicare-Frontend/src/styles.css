@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+body{
+    background-image: url("./assets/towfiqu-barbhuiya-w8p9cQDLX7I-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100% }
+ button:hover{
+    box-shadow: 2px 2px 4px 4px #484a4a;
+   }

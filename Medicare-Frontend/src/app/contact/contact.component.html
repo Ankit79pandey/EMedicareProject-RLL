@@ -1,0 +1,37 @@
+<app-header></app-header>
+<h1 style="color: black; text-align: center;margin: 30px;font-weight: 500;">Contact Us</h1>
+<div class="container form">
+
+<form #s="ngForm" (ngSubmit)="onSubmit(s)">
+    <div class="form-group">
+        <label  for="name">Name</label>
+        <input type="text" required class="form-control" name="name" ngModel #name="ngModel" />
+        <span 
+        *ngIf="name.invalid && name.touched" class="error">Cannot submit form if required fields are null
+      </span>  
+      <!--<span appMarkAsterisk [formGroup]="formGroup" [controlName]="'name'"></span>-->
+      </div>
+  <div class="form-group">
+          <label for="emailId">Mail-Id</label>
+          <input type="text" required class="form-control" name="emailId" ngModel #emailId="ngModel" />
+          <span 
+          *ngIf="emailId.invalid && emailId.touched" class="error">Cannot submit form if required fields are null</span>
+        </div>
+        <div class="form-group">
+          <label  for="contactNo">Contact No</label>
+          <input type="text" required class="form-control" name="contactNo" ngModel #contactNo="ngModel" />
+          <span 
+        *ngIf="contactNo.invalid && contactNo.touched" class="error">Cannot submit form if required fields are null
+      </span>  
+        </div>
+        <div class="form-group">
+          <label for="description">Description</label>
+          <input type="text" required class="form-control" name="description" ngModel #description="ngModel" />
+          <span 
+        *ngIf="description.invalid && description.touched" class="error">Cannot submit form if required fields are null
+      </span>  
+        </div>
+        <button [disabled]="s.invalid" type="submit" value="Submit" >Submit</button>
+        </form>
+        </div>
+<router-outlet></router-outlet>

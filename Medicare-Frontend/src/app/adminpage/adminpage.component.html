@@ -1,0 +1,182 @@
+<div class="navbar navbar-dark bg-primary shadow-sm">
+    <div class="navbar-brand align-item-center d-flex">
+        <i style="font-size:40px;" class="fas fa-shipping-fast">EMedicare
+        </i>
+    
+    
+    </div>
+    <div class="container1">
+         <button  class="btn btn-warning logout" (click)="logout()">logout</button>
+      </div>
+
+</div>
+
+<div class="container-fluid tableContainer" style="margin-left:10% ;">
+    <div class="row" >
+      
+    <span style="color: Black;font-size: 32px;padding: 20px;">Welcome to Admin Portal !!</span>
+    <button type="button "  data-toggle="modal" data-target="#exampleModal" class="btn add btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Medicine</button>
+  
+</div>
+
+<div class="row ">
+  <div class="scroll">
+    <table class="table table-bordered table-scroll table-striped">
+    
+    <thead>
+    
+    <tr>
+    
+    <th>Id</th>
+    
+    <th>Medicine Name</th>
+    
+    <th>Price</th>
+    
+    <th>Description</th>
+    <th>Manufacture Date</th>
+    <th>ExpiryDate</th>
+    <th>Seller</th>
+    <th>Status</th>
+    <th>type</th>
+    <th>Stock</th>
+    <th>Edit</th>
+    <th>Delete</th>
+    </tr>
+    
+    </thead>
+    
+    <tbody>
+    
+    <tr *ngFor="let u of medicine">
+    
+    <td>{{u.medicineId}}</td>
+    
+    <td>{{u.medicineName}}</td>
+    
+    <td>{{u.price}}</td>
+    <td>{{u.description}}</td>
+    <td>{{u.manufactureDate}}</td>
+    <td>{{u.expdate}}</td>
+    <td>{{u.seller}}</td>
+    <td>{{u.status}}</td>
+    <td>{{u.type}}</td>
+    <td>{{u.stock}}</td>
+  
+    <td>
+     
+        <button class="btn edit  btn-primary me-2" type="button" (click)="UpdateMedicine(u)" type="button" data-toggle="modal" data-target="#exampleModal">Edit</button>
+      </td>   <td>    <button class="btn danger btn-danger" (click)="DeleteMedicine(u)">Delete</button>
+
+      
+    </td>
+    </tr>
+    
+    </tbody>
+    
+    </table>
+  </div>
+  </div>
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Medicine Details</h5>
+              
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="form" (ngSubmit)="AddMedicine()">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Medicine Name</label>
+                      <input formControlName="medicineName" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Medicine name"/>
+                         </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Price</label>
+                      <input formControlName="price" type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter price">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Description</label>
+                        <input formControlName="description" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Description">
+                           </div>
+                           <div class="form-group">
+                            <label for="exampleInputEmail1">Manufacturing Date</label>
+                            <input formControlName="manufactureDate" type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Description">
+                               </div>
+                           <div class="form-group">
+                            <label for="exampleInputEmail1">Expiry Date</label>
+                            <input formControlName="expdate" type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Expiry Date">
+                               </div>
+                               <div class="form-group">
+                                <label for="exampleInputEmail1">Seller Name</label>
+                                <input formControlName="seller" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Seller Name">
+                                   </div>
+                                   <div class="form-group">
+                                    <label for="exampleInputEmail1">Status</label>
+                                    <input formControlName="status" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter status">
+                                       </div>
+                                       <div class="form-group">
+                                        <label for="exampleInputEmail1">type</label>
+                                        <input formControlName="type" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter type">
+                                           </div>
+              
+                                           <div class="form-group">
+                                            <label for="exampleInputEmail1">Stock</label>
+                                            <input formControlName="stock" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter stock present">
+                                               </div>
+                  
+             
+           
+           
+        </form>
+      
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button *ngIf="btnSaveShow" type="submit" id="add" (click)="AddMedicine()" class="btn btn-primary" >Add Medicine</button>
+        <button *ngIf="btnUpdateShow" (click)="UpdateUserDetails()" class="btn btn-primary" >Update</button>
+      </div>     
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Launch demo modal
+  </button> -->
+  
+  <!-- Modal
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div> -->

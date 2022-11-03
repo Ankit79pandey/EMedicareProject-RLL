@@ -1,0 +1,46 @@
+
+
+<div class="container-fluid">
+    <div style="width: 105%;margin-left:-20px" >
+<div class="navbar navbar-dark bg-primary shadow-sm">
+    <div class="navbar-brand align-item-center d-flex">
+        <i style="font-size:40px;" class="fas fa-shipping-fast">
+        </i>
+            <strong style="font-size:30px;">E-Medicare</strong>
+            
+    </div>
+    
+    <nav class="navigation" >
+      <strong><a style="color: white;text-decoration:none;margin-right:30px;font-size: 20px;" routerLink="/userpage" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="main-items">Back</a>
+      </strong>  
+      <strong style="font-size:20px;margin-right: 70px;"><a routerLink="" style="text-decoration:none;" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="main-items text-light">Log-out</a>
+      </strong>  
+    </nav>
+</div>       
+</div>
+</div>
+<div class="container">
+<div class="form">
+    <form #userData="ngForm" (ngSubmit)="onSubmit()">
+        <h1><span style="color: black;font-weight:600;text-align:center;justify-content:center">Update Profile</span></h1>
+        <br>
+        
+        <label for="first_name">FirstName</label><br>
+        <input type="text"name="first_name" [(ngModel)]="user.first_name" /><br><br>
+        <label for="last_name">Lastname</label><br>
+        <input type="text" name="last_name" [(ngModel)]="user.last_name" /><br><br>
+        <label for="mobile_no">Mobile no</label><br>
+        <input type="number" name="mobile_no" [(ngModel)]="user.mobile_no"/><br><br>
+        <label for="age">Age</label><br>
+        <input type="text" name="age" [(ngModel)]="user.age"/><br><br>
+	  <label for="gender">Gender</label><br>
+        <input type="text" name="gender" [(ngModel)]="user.gender" ><br><br>
+        <label for="password">Password</label><br>
+        <input type="password" name="password" [(ngModel)]="user.password" /><br><br>
+        <button type="submit " class="btn" >
+            Submit</button>
+       
+      
+      </form>
+</div>
+</div>

@@ -1,0 +1,36 @@
+<div id="sect1"class="container">
+    <header class="main-header-1">
+        <div>
+            <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="logo">Pocket-Pills</a>
+            </div>
+            <nav class="navigation">
+                <a routerLink="/adminpage" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="main-items">Back</a>
+                <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="main-items">Log-out</a>  
+            </nav>
+    </header>
+    <h1  style="text-align: center;color: black;">CONTACT-US QUERIES</h1>
+    <div>
+    <div class="doc-list">
+    </div>
+    
+    <div class="doc" style="text-align:center;">
+    <table border="1" bgcolor="white" class="table table-hover table-info" align="center" bordercolor="blue" style="width: 1000px;">
+        <tr style="font-family: 'Times New Roman', Times, serif;"  > 
+            
+            <th>Name</th>
+            <th>MailId</th>
+            <th>Contact Number</th>
+            <th>description</th>
+        </tr> 
+        <tr *ngFor="let contacts of contacts" style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">
+            
+            <td>{{contacts.name}}</td>
+            <td>{{contacts.emailId}}</td>
+            <td>{{contacts.contactNo}}</td>
+            <td>{{contacts.description}}</td>
+        </tr>
+        </table>
+    </div>
+   
+    </div> 
+    <router-outlet></router-outlet>

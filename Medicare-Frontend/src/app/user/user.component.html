@@ -1,0 +1,39 @@
+<app-header></app-header>
+
+<router-outlet></router-outlet>
+<body>
+
+  <h2 style="margin: 30px;">User Login </h2>
+<div class="container  form">
+<form #f="ngForm" (ngSubmit)="onSubmit(f)">
+  
+
+
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="UserName" id="username" name="username" 
+                    class="searchTextField" placeholder="Enter Username" ngModel> 
+                
+
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" id="password" name="password" 
+                class="searchTextField" placeholder="Enter Password" ngModel>
+          
+    <button type="submit">Login</button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" class="cancelbtn">Cancel</button>
+    <span class="psw">New User ?<a [routerLink]="['/registration']"style="color:blue">Sign Up</a>
+    </span>
+  </div>
+</form>
+</div>
+
+
+
+    

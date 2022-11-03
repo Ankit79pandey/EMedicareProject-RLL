@@ -1,0 +1,131 @@
+
+
+
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+h2 {text-align: center;}
+span {
+	color: red;
+  }
+  input.ng-valid{
+	  border-left: 5px solid green;
+  }
+  input.ng-invalid{
+	border-left: 5px solid red;
+}
+ 
+ 
+  
+  .main-header-1 {
+      background-color: rgba(6, 6, 252, 0.705)
+      /* background-color: #f1ddc0; */
+  }
+  
+  .main-header-1 > div {
+      display: inline-block;
+      vertical-align: middle;
+      padding: 10px;
+  }
+  .navigation {
+      width: 100%;
+      position: absolute;
+      left: 0;
+      padding: 8px;
+      z-index: 1;
+      display: inline-block;
+      text-align: right;
+      width: fit-content;
+      margin-left: 75%;
+      
+  }
+  .main-items{
+      font-size: 14pt;
+      font-weight: bold;
+      line-height: 38px;
+      
+  }
+  .navigation > a {
+      display: inline-block;
+      margin: 0 8px;
+      text-decoration: none;
+      font-weight: 900;
+      color: rgb(6, 6, 6);
+  }
+  .content {
+      width: 100%;
+      height: 540px;
+      background-size: cover;
+  }
+  .head1 {
+      position: relative;
+      top: 45%;
+      margin: auto;
+      color: rgb(15, 14, 14);
+      text-align: center;
+      font-size: 30pt;
+      font-weight: 800;
+  }
+  .amenities {
+      height: 300px;
+      position: relative;
+      top: 5%;
+      background-color: beige;
+  }
+  .ul-list1 {
+      text-align: center;
+      list-style: none;
+      width: auto; 
+      background-color: beige;
+      background-position: center;
+  }
+  .button {
+    background-color: rgb(2, 248, 2);
+    border: none;
+    color: white;
+    padding: 5px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  .buttonon {
+    background-color: rgb(243, 40, 57);
+    border: none;
+    color: white;
+    padding: 5px 23px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  .form-group{
+    font-family: "Lucida Console", "Courier New", monospace;
+    color: rgb(8, 8, 8);
+  }
+  .enroll{
+    background-color: rgb(154, 207, 251);
+    opacity: 100%;
+    width: 50%;
+    
+    border-radius: 20px;
+    padding: 20px 30px;
+    margin: auto;
+    
+    box-shadow: #414a74 20px 20px 10px;
+    }
+    body {
+      font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif; 
+    }

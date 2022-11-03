@@ -1,0 +1,68 @@
+<header>
+    <div class="navbar navbar-dark bg-primary shadow-sm">
+        <div class="navbar-brand align-item-center d-flex">
+            <i style="font-size:40px;" class="fas fa-shipping-fast">
+            </i>
+                <strong style="font-size:30px;">E-Medicare</strong>
+                
+        </div>
+        <div class="form-group">
+            <input class="form-control" type="text" class="form-control" placeholder="search Medicines"  [(ngModel)]="searchText">
+
+        </div>
+        <span class="fas fa-search search-icon"></span>
+      
+        <nav class="navigation">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+           
+            <a routerLink="/userpage" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="main-items">Back</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            
+            <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="main-items">Log-out</a>
+            
+        </nav>
+                
+</div>
+
+
+  <router-outlet></router-outlet>
+  <div class="container">
+  <div class="card-table">
+    
+    <div class="card-product" >
+        
+        <table class="table table-responsive" >
+           
+            <thead>
+                <tr>
+                      <th>Medicine</th> 
+                        <th>Desccription</th>
+                        <th>Price</th>
+                        <th>Proceed For Payment</th>
+                        <th>Remove From Cart</th>
+                        
+                    </tr>
+
+            </thead>
+            <tbody>
+                
+                    <tr *ngFor="let cart of carts | search: searchText" style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+            
+                        <td>{{cart.medicineName}}</td>
+                        <td>{{cart.description}}</td>
+                        <td>{{cart.price}}</td>
+                        <td> <a routerLink="/billing/{{cart.medicineId}}" (click)="delete(cart.cartId)" class="button">BUY NOW</a></td>
+                        <td> <button (click)="deleteCart(cart.cartId)" class="buttonon">REMOVE FROM CART</button></td>
+                        
+                    </tr>
+                    
+                
+
+            </tbody>
+      
+        </table>
+   
+    </div>
+</div>
+</div>

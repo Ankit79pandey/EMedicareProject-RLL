@@ -1,0 +1,114 @@
+body {
+    color: #f5f5f5;
+    }
+    
+    img {
+        width: 100%;
+        height: 100vh;
+        background-repeat: no-repeat;
+        z-index: -1;
+        position: fixed;
+        background-size: cover;
+        opacity: 1;
+      }
+      #sect1 {  
+        background-image:url("https://media.gettyimages.com/videos/generic-pills-falling-on-a-black-surface-video-id1141790226?s=640x640");  
+        background-size: 100%;  
+        background-size: cover;
+        width: 100%;
+        height: 100vh;
+        background-repeat: no-repeat; 
+        z-index: -1;
+        position: absolute ;
+        opacity: 1; 
+    }  
+    
+    .wrapper {
+      width: 100%;
+      height: 90vh;
+      overflow: hidden;
+      position: relative;
+      text-align: center;
+    }
+    .wrapper>div {
+      width: 100%;
+      height: 90vh;
+      position: absolute;
+      animation: animate 20s infinite;
+      background-size: cover;
+      background-position: center;
+    }
+
+    
+      .content {
+        position: relative;
+      }
+      .PART1 {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        opacity: 20px;
+        margin: 20px 50px;
+        z-index: 150;
+        display: block;
+      }
+      .knowmore {
+        text-align: center;
+        margin: 20px 0;
+      }
+      .knowmore a {
+        text-decoration: none;
+        color: black;
+      }
+      .course {
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+      }
+      .course-item1 {
+        width: 35%;
+        height: 200px;
+        margin: 20px 20px;
+        background-color: #a47533;
+        padding: 20px 20px;
+        border-radius: 30px;
+      }
+      .course-item1 a {
+        color: white;
+        font-size: 17px;
+      }
+      .course-item2 {
+        width: 35%;
+        margin: 20px 20px;
+        background-color: #a47533;
+        padding: 20px 20px;
+        border-radius: 30px;
+      }
+      .course-item2 a {
+        color: white;
+        font-size: 17px;
+      }
+      
+      .fheading {
+        width: 500px;
+        height: 100px;
+        margin: 50px 50px;
+        font-family: cursive;
+      }
+      .knowmore a {
+        border: 1px solid white;
+        background-color: #a47533;
+        margin: 5px 5px;
+        padding: 6px 6px;
+        border-radius: 25px;
+        color: white;
+      }
+      .course-item {
+        margin: 10px 0;
+      }
+      .foot{
+        background-color: blue
+      }
+      
+    
+    

@@ -1,0 +1,135 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="navbar navbar-dark bg-primary shadow-sm">
+            <div class="navbar-brand align-item-center d-flex">
+                <i style="font-size:40px;" class="fas fa-shipping-fast">
+                </i>
+                <strong style="font-size:30px;">E-Medicare</strong>
+
+            </div>
+            <div class="form-group">
+                <input style="margin-top: 3%" class="form-control" type="text" class="form-control"
+                    placeholder="search Medicines" [(ngModel)]="searchText">
+
+            </div>
+
+
+
+            <nav class="navigation">
+
+
+                <a href="#" routerLink="/cart" style="margin-right: 5px !important; margin-top: 4px;"
+                    routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="main-items"> <i
+                        style="font-size:30px;padding-top: 6px;color:white" class="fas fa-cart-plus"></i></a>
+                <div class="badge bg-warning" style="font-size: 15px;color: white;">{{this.count}}</div>
+
+                <!-- <strong style="font-size: 15px;color: white; margin-right: 70px;">
+                    Go to Cart
+                </strong> -->
+
+               
+                <a  style="margin-left: 20px;margin-right: 20px;" routerLink="/profile_update" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+                    class="main-items text-light">Profile Update</a>
+
+
+                <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+                    class="main-items text-light">Log-out</a>
+
+            </nav>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>
+<div class="card-top container-fluid">
+    <div class="container d-flex">
+        <div class="item">
+
+            <a>
+                <img src="../assets/medi1.jpg" class="img1" alt="Responsive image">
+                <h6> <a style="color:black">Babies</a></h6>
+            </a>
+
+        </div>
+        <div class="item">
+            <a>
+                <img src="../assets/medi2.jpg" class="img2" alt="Responsive image">
+                <h6> <a style="color:black">Elder Medicine</a></h6>
+            </a>
+
+        </div>
+        <div class="item">
+
+            <a>
+                <img src="../assets/medi3.jpg" alt="Responsive image">
+                <h6> <a style="color:black">Heart</a></h6>
+            </a>
+
+        </div>
+        <div class="item">
+            <a>
+                <img src="../assets/medi4.jpg" alt="Responsive image">
+                <h6> <a style="color:black">Head</a></h6>
+
+            </a>
+
+        </div>
+
+    </div>
+</div>
+
+
+
+<router-outlet></router-outlet>
+
+<div>
+    <div class="doc" style="text-align:center;">
+
+
+        <div class="container">
+            <div class="row">
+
+                <ng-container *ngFor="let Medicines of medicines | search: searchText">
+                    <div class="card col-md-3">
+
+
+                        <h5><strong> Name: </strong>{{Medicines.medicineName}}</h5>
+                        <p style="white-space: nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100ch;">
+                            <strong>Used for : </strong>{{Medicines.description}}</p>
+                        <p
+                            style="white-space: nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100ch;color:green">
+                            <strong>Price: </strong>Rs.{{Medicines.price}}</p>
+
+                        <p style="white-space: nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100ch;">
+                            <strong>ManufactureDate: </strong>{{Medicines.manufactureDate}}</p>
+
+                        <p style="white-space: nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100ch;">
+                            <strong>MedicineType: </strong>{{Medicines.type}}</p>
+
+                        <p
+                            style="white-space: nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100ch;color: rgb(255, 0, 0);">
+                            <strong>ExpiryDate: </strong>{{Medicines.expdate}}</p>
+                        <p
+                            style="white-space: nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100ch;color:rgb(46, 66, 15)">
+                            <strong>Status: </strong>{{Medicines.status}}</p>
+                        <p style="white-space: nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100ch;">
+                            <strong>Seller: </strong>{{Medicines.seller}}</p>
+
+
+
+
+
+
+
+
+                        <td> <button (click)="addCart(Medicines.medicineId)" (click)="AddToCart(Medicines.medicineId)"
+                                style="text-align: center;justify-content: center;margin-left: 10%;" class="buttonon">
+                                ADD TO CART </button></td>
+
+
+
+                    </div>
+
+                </ng-container>
+
+            </div>
+        </div>
